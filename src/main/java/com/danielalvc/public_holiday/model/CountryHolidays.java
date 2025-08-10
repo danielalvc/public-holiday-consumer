@@ -5,6 +5,16 @@ public class CountryHolidays {
 	private String name;
 	private Integer holidayNumber;
 
+	public CountryHolidays() {
+		super();
+	}
+
+	public CountryHolidays(String name, Integer holidayNumber) {
+		super();
+		this.name = name;
+		this.holidayNumber = holidayNumber;
+	}
+
 	public String getName() {
 		return name;
 	}

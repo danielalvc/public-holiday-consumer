@@ -1,18 +1,29 @@
 package com.danielalvc.public_holiday.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class CommonHoliday {
 
-	private Date date;
+	private LocalDate date;
 	private String firstLocalName;
 	private String secondLocalName;
 
-	public Date getDate() {
+	public CommonHoliday() {
+		super();
+	}
+
+	public CommonHoliday(LocalDate date, String firstLocalName, String secondLocalName) {
+		super();
+		this.date = date;
+		this.firstLocalName = firstLocalName;
+		this.secondLocalName = secondLocalName;
+	}
+
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 

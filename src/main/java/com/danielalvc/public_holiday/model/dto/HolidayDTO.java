@@ -1,18 +1,18 @@
 package com.danielalvc.public_holiday.model.dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public final class HolidayDTO {
 
-	private Date date;
+	private LocalDate date;
 	private String localName;
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(LocalDate localDate) {
+		this.date = localDate;
 	}
 
 	public String getLocalName() {
