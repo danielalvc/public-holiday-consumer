@@ -94,3 +94,15 @@ between two countries each expressed as its ISO 3166-1 alpha-2 country code.
 Example in 2025 between Spain and the Netherlands:
 
 [http://localhost:8080/getCommonHolidays/2025/es/nl](http://localhost:8080/getCommonHolidays/2025/es/nl)
+
+### Errors
+
+- When a country does not have any holidays, for the **last three holidays** endpoint and the
+**common holidays between two countries** endpoint will return an empty list, as the first
+endpoint does not have anything to return and for the second any common holidays between a country
+and another that doesn't have holidays will always be none.
+
+-In the **number of holidays on weekdays** and **raw number of holidays on weekdays** endpoint
+the countries without holidays will be included with 0 on the count and any country code that gets an
+error from the API will be included on the list with 0 holidays to be able to inform of the countries
+that do have holidays instead of throwing an error.
